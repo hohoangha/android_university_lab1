@@ -4,44 +4,60 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:layout_margin="6dp">
 
-    <TextView
-        android:id="@+id/ranking"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp" />
+        android:layout_marginBottom="12dp"
+        android:orientation="horizontal">
 
-    <ImageView
-        android:id="@+id/book_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:srcCompat="@tools:sample/avatars" />
+        <TextView
+            android:id="@+id/ranking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="@id/book_image"
+            android:fontFamily="serif"
+            android:textSize="22sp"/>
+
+        <ImageView
+            android:id="@+id/book_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
 
     <TextView
         android:id="@+id/book_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:textAppearance="?attr/textAppearanceListItem" />
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textAppearance="?attr/textAppearanceListItem"/>
 
     <TextView
         android:id="@+id/book_author"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="@dimen/text_margin"
-        android:textAppearance="?attr/textAppearanceListItem" />
+        android:textAppearance="?attr/textAppearanceListItem"/>
 
     <TextView
         android:id="@+id/book_description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp" />
+        android:layout_gravity="center_horizontal"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif-light"
+        android:maxLines="5"
+        android:textAppearance="?attr/textAppearanceListItem"/>
 
     <Button
         android:id="@+id/buy_button"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="BUY ON AMAZON" />
+        android:text="BUY ON AMAZON"
+        android:backgroundTint="#7734eb"
+        android:textColor="#f7f7f7"/>
 
 </LinearLayout>
